@@ -1,4 +1,4 @@
-package chuckNorrisClient
+package clients
 
 import (
 	"encoding/json"
@@ -17,7 +17,7 @@ func getEndpoint() string {
 	return "https://api.chucknorris.io/jokes"
 }
 
-func GetFact() (ChuckNorrisDTO, error) {
+func GetChuckNorrisFact() (ChuckNorrisDTO, error) {
 	resp, err := http.Get(getEndpoint() + "/random")
 
 	if err != nil {
